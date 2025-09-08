@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<!-- This tells the browser we're using HTML5 (the latest version of HTML) -->
+<html lang="en">
+<!-- The main container for our webpage. "lang='en'" tells browsers this page is in English -->
+
+<head>
+    <!-- The head section contains information ABOUT the page that visitors don't see directly -->
+    
+    <!-- This tells the browser how to read the text on our page (UTF-8 handles all languages and symbols) -->
+    <meta charset="UTF-8">
+    
+    <!-- This makes our website work well on mobile phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title that appears in the browser tab -->
+    <title>Contact - My Static Blog</title>
+    
+    <!-- Description that search engines like Google use to understand what this page is about -->
+    <meta name="description" content="Get in touch with the author of My Static Blog">
+    
+    <!-- These tags help when people share our page on social media like Facebook -->
+    <meta property="og:title" content="Contact - My Static Blog">
+    <meta property="og:description" content="Get in touch with the author of My Static Blog">
+    <meta property="og:image:alt" content="Contact page preview">
+    
+    <!-- These tags help when people share our page on Twitter -->
+    <meta name="twitter:title" content="Contact - My Static Blog">
+    <meta name="twitter:description" content="Get in touch with the author of My Static Blog">
+    
+    <!-- This connects our HTML to our CSS file (which makes everything look nice) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- The body contains everything that visitors can see and interact with -->
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- This is the top part of our website with the logo and navigation menu -->
+    <header class="header">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            <!-- Our website logo/title -->
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            
+            <!-- Navigation menu for moving between pages -->
+            <nav class="nav">
+                <!-- List of navigation links -->
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <!-- "active" class shows which page we're currently on -->
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+                
+                <!-- Hamburger menu button (only visible on mobile phones) -->
+                <button class="nav-toggle" id="navToggle">
+                    <!-- These three spans create the three lines of the hamburger icon -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT SECTION ===== -->
+    <!-- This is where the main content of our Contact page goes -->
+    <main class="main">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            <!-- Contact page content section -->
+            <section class="contact-content">
+                <!-- Main heading for the Contact page -->
+                <h2>Get In Touch</h2>
+                <!-- Subtitle explaining what this page is for -->
+                <p>Have a question or want to collaborate? I'd love to hear from you!</p>
+                
+                <!-- Two-column layout: contact form on left, contact info on right -->
+                <div class="contact-grid">
+                    
+                    <!-- ===== CONTACT FORM SECTION ===== -->
+                    <!-- Container for the contact form -->
+                    <div class="contact-form-container">
+                        <!-- The actual contact form that people can fill out -->
+                        <form class="contact-form" id="contactForm">
+                            
+                            <!-- Name input field -->
+                            <div class="form-group">
+                                <!-- Label tells users what to enter -->
+                                <label for="userName">Name</label>
+                                <!-- Input field where users type their name -->
+                                <!-- "required" means they must fill this out -->
+                                <input type="text" id="userName" name="name" required>
+                                <!-- Error message area (hidden until needed) -->
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+                            
+                            <!-- Email input field -->
+                            <div class="form-group">
+                                <label for="userEmail">Email</label>
+                                <!-- "type='email'" helps validate email format -->
+                                <input type="email" id="userEmail" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            
+                            <!-- Message textarea field -->
+                            <div class="form-group">
+                                <label for="userMessage">Message</label>
+                                <!-- Textarea allows multiple lines of text -->
+                                <!-- "rows='5'" sets the initial height -->
+                                <textarea id="userMessage" name="message" rows="5" required></textarea>
+                                <span class="error-message" id="messageError"></span>
+                            </div>
+                            
+                            <!-- Submit button to send the form -->
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                        
+                        <!-- Success message (appears after form is successfully submitted) -->
+                        <div class="success-message" id="successMessage">
+                            <p>Thank you for your message! I'll get back to you soon.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== CONTACT INFORMATION SECTION ===== -->
+                    <!-- Alternative ways to contact (besides the form) -->
+                    <div class="contact-info">
+                        <h3>Other Ways to Reach Me</h3>
+                        
+                        <!-- Email contact information -->
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <p>hello@myblog.com</p>
+                        </div>
+                        
+                        <!-- Social media contact information -->
+                        <div class="contact-item">
+                            <strong>Social Media:</strong>
+                            <p>Follow me on Twitter @myblog</p>
+                        </div>
+                        
+                        <!-- Response time information -->
+                        <div class="contact-item">
+                            <strong>Response Time:</strong>
+                            <p>I typically respond within 24-48 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <!-- This appears at the bottom of every page -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Copyright notice -->
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <!-- Button that appears when you scroll down, helps you get back to the top quickly -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- ===== JAVASCRIPT FILE ===== -->
+    <!-- This connects our HTML to our JavaScript file (which makes the page interactive) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

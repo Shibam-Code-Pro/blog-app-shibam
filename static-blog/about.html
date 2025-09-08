@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!-- This tells the browser we're using HTML5 (the latest version of HTML) -->
+<html lang="en">
+<!-- The main container for our webpage. "lang='en'" tells browsers this page is in English -->
+
+<head>
+    <!-- The head section contains information ABOUT the page that visitors don't see directly -->
+    
+    <!-- This tells the browser how to read the text on our page (UTF-8 handles all languages and symbols) -->
+    <meta charset="UTF-8">
+    
+    <!-- This makes our website work well on mobile phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title that appears in the browser tab -->
+    <title>About - My Static Blog</title>
+    
+    <!-- Description that search engines like Google use to understand what this page is about -->
+    <meta name="description" content="Learn about the author and the purpose of My Static Blog">
+    
+    <!-- These tags help when people share our page on social media like Facebook -->
+    <meta property="og:title" content="About - My Static Blog">
+    <meta property="og:description" content="Learn about the author and the purpose of My Static Blog">
+    <meta property="og:image:alt" content="About page preview">
+    
+    <!-- These tags help when people share our page on Twitter -->
+    <meta name="twitter:title" content="About - My Static Blog">
+    <meta name="twitter:description" content="Learn about the author and the purpose of My Static Blog">
+    
+    <!-- This connects our HTML to our CSS file (which makes everything look nice) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- The body contains everything that visitors can see and interact with -->
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- This is the top part of our website with the logo and navigation menu -->
+    <header class="header">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            <!-- Our website logo/title -->
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            
+            <!-- Navigation menu for moving between pages -->
+            <nav class="nav">
+                <!-- List of navigation links -->
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <!-- "active" class shows which page we're currently on -->
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Hamburger menu button (only visible on mobile phones) -->
+                <button class="nav-toggle" id="navToggle">
+                    <!-- These three spans create the three lines of the hamburger icon -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT SECTION ===== -->
+    <!-- This is where the main content of our About page goes -->
+    <main class="main">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            <!-- About page content section -->
+            <section class="about-content">
+                <!-- Main heading for the About page -->
+                <h2>About Me</h2>
+                
+                <!-- Two-column layout: text content on left, profile image on right -->
+                <div class="about-grid">
+                    
+                    <!-- ===== ABOUT TEXT CONTENT ===== -->
+                    <!-- Main text content about the author -->
+                    <div class="about-text">
+                        <!-- Introduction paragraph -->
+                        <p>Hello! Welcome to my blog. I'm a passionate web developer who loves sharing knowledge about modern web technologies, best practices, and helpful tutorials.</p>
+                        
+                        <!-- Purpose of the blog -->
+                        <p>This blog was created to document my learning journey and to help others who are starting their path in web development. Here you'll find articles about HTML, CSS, JavaScript, and various web development topics.</p>
+                        
+                        <!-- Section about what readers can expect -->
+                        <h3>What You'll Find Here</h3>
+                        <!-- List of content types -->
+                        <ul>
+                            <li>Beginner-friendly tutorials</li>
+                            <li>Best practices and tips</li>
+                            <li>Code examples and demos</li>
+                            <li>Industry insights and trends</li>
+                        </ul>
+                        
+                        <!-- Skills section -->
+                        <h3>My Skills</h3>
+                        <!-- Skills displayed as colorful badges/pills -->
+                        <div class="skills">
+                            <span class="skill">HTML5</span>
+                            <span class="skill">CSS3</span>
+                            <span class="skill">JavaScript</span>
+                            <span class="skill">Responsive Design</span>
+                            <span class="skill">Git</span>
+                            <span class="skill">Web Accessibility</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== PROFILE IMAGE SECTION ===== -->
+                    <!-- Container for the author's profile picture -->
+                    <div class="about-image">
+                        <!-- Profile picture with alt text for accessibility -->
+                        <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/300x400/6366f1/ffffff?text=Profile" alt="Profile picture">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <!-- This appears at the bottom of every page -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Copyright notice -->
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <!-- Button that appears when you scroll down, helps you get back to the top quickly -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- ===== JAVASCRIPT FILE ===== -->
+    <!-- This connects our HTML to our JavaScript file (which makes the page interactive) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,678 @@
+/* ===== RESET STYLES - CLEAN SLATE FOR ALL BROWSERS ===== */
+/* This removes default spacing from all elements so we start fresh */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* This makes width/height include padding and borders */
+}
+
+/* ===== BASIC WEBSITE STYLING ===== */
+/* This styles the entire webpage */
+body {
+    font-family: 'Arial', sans-serif; /* Use Arial font - easy to read */
+    line-height: 1.6; /* Space between lines of text */
+    color: #333; /* Dark gray text color */
+    background-color: #f8f9fa; /* Light gray background color */
+}
+
+/* ===== CONTAINER - KEEPS CONTENT CENTERED ===== */
+/* This centers all our content and limits how wide it gets */
+.container {
+    max-width: 1200px; /* Don't let content get wider than this */
+    margin: 0 auto; /* Center everything horizontally */
+    padding: 0 20px; /* Add space on left and right sides */
+}
+
+/* ===== HEADER - TOP PART OF WEBSITE ===== */
+/* This styles the header with logo and navigation */
+.header {
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add a subtle shadow */
+    position: sticky; /* Header stays at top when you scroll */
+    top: 0; /* Stick to the very top */
+    z-index: 100; /* Make sure it appears above other content */
+}
+
+/* Layout for items inside the header */
+.header .container {
+    display: flex; /* Put items in a row */
+    justify-content: space-between; /* Logo on left, menu on right */
+    align-items: center; /* Center everything vertically */
+    padding: 1rem 20px; /* Add space inside the header */
+}
+
+/* Style for our website logo */
+.logo h1 {
+    color: #4f46e5; /* Purple color */
+    font-size: 1.8rem; /* Make it bigger than normal text */
+}
+
+/* ===== NAVIGATION MENU ===== */
+/* Container for the navigation menu */
+.nav {
+    display: flex; /* Put navigation items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+/* List of navigation menu items */
+.nav-list {
+    display: flex; /* Put menu items in a row */
+    list-style: none; /* Remove bullet points */
+    gap: 2rem; /* Space between each menu item */
+}
+
+/* Style for navigation links */
+.nav-link {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Dark gray text */
+    font-weight: 500; /* Make text a bit bolder */
+    transition: color 0.3s ease; /* Smooth color change when hovering */
+}
+
+/* What happens when you hover over or click a menu item */
+.nav-link:hover,
+.nav-link.active {
+    color: #4f46e5; /* Change to purple color */
+}
+
+/* ===== MOBILE HAMBURGER MENU ===== */
+/* The 3-line button that appears on mobile phones */
+.nav-toggle {
+    display: none; /* Hidden on desktop computers */
+    flex-direction: column; /* Stack the 3 lines vertically */
+    background: none; /* No background color */
+    border: none; /* No border */
+    cursor: pointer; /* Show hand cursor when hovering */
+    padding: 0.5rem; /* Add space around button for easier clicking */
+}
+
+/* The 3 lines that make up the hamburger menu */
+.nav-toggle span {
+    width: 25px; /* How wide each line is */
+    height: 3px; /* How thick each line is */
+    background-color: #333; /* Dark gray color */
+    margin: 3px 0; /* Space between the lines */
+    transition: 0.3s; /* Smooth animation when menu opens/closes */
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+/* This is where all the main content goes (everything except header and footer) */
+.main {
+    min-height: calc(100vh - 140px); /* Make sure content fills most of the screen */
+    padding: 2rem 0; /* Add space at top and bottom */
+}
+
+/* ===== WELCOME SECTION ===== */
+/* The big welcome message at the top of the homepage */
+.hero {
+    text-align: center; /* Center all the text */
+    margin-bottom: 3rem; /* Add space below this section */
+}
+
+/* The big "Welcome to My Blog" heading */
+.hero h2 {
+    font-size: 2.5rem; /* Make the text big */
+    color: #333; /* Dark gray color */
+    margin-bottom: 1rem; /* Add space below the heading */
+}
+
+/* The description text under the heading */
+.hero p {
+    font-size: 1.2rem; /* Make it a bit bigger than normal text */
+    color: #666; /* Medium gray color */
+    max-width: 600px; /* Don't let it get too wide */
+    margin: 0 auto; /* Center the text */
+}
+
+/* ===== BLOG POSTS SECTION ===== */
+/* The "Latest Posts" heading */
+.blog-grid h3 {
+    text-align: center; /* Center the heading */
+    font-size: 2rem; /* Make it big */
+    margin-bottom: 2rem; /* Add space below */
+    color: #333; /* Dark gray color */
+}
+
+/* Container that holds all the blog post cards */
+.posts-container {
+    display: grid; /* Use CSS Grid to arrange the cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Make cards responsive */
+    gap: 2rem; /* Space between each card */
+}
+
+/* ===== INDIVIDUAL BLOG POST CARDS ===== */
+/* Each blog post card (the boxes that show post previews) */
+.post-card {
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Don't let content stick out of rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow around card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation when hovering */
+    display: flex; /* Use flexbox to organize content inside */
+    flex-direction: column; /* Stack image, title, text, button vertically */
+    height: 100%; /* Make all cards the same height */
+}
+
+/* What happens when you hover over a blog post card */
+.post-card:hover {
+    transform: translateY(-5px); /* Lift the card up slightly */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Make shadow stronger */
+}
+
+/* The image at the top of each blog post card */
+.post-image img {
+    width: 100%; /* Make image fill the full width */
+    height: 200px; /* Set a fixed height so all images look the same */
+    object-fit: cover; /* Crop image nicely to fit the space */
+}
+
+/* The text area below the image in each card */
+.post-content {
+    padding: 1.5rem; /* Add space around the text */
+    display: flex; /* Use flexbox to organize content */
+    flex-direction: column; /* Stack title, excerpt, button vertically */
+    flex-grow: 1; /* Fill up the remaining space in the card */
+}
+
+/* The title of each blog post */
+.post-title {
+    font-size: 1.3rem; /* Make title text bigger than normal */
+    margin-bottom: 0.5rem; /* Small space below title */
+    color: #333; /* Dark gray color */
+}
+
+/* The preview text (excerpt) of each blog post */
+.post-excerpt {
+    color: #666; /* Medium gray color */
+    margin-bottom: 1rem; /* Space below the preview text */
+    line-height: 1.5; /* Good spacing between lines for easy reading */
+    flex-grow: 1; /* Take up available space, pushing button to bottom */
+}
+
+/* The "Read More" button on each card */
+.read-more {
+    display: inline-block; /* Allow us to add padding and margins */
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 0.5rem 1rem; /* Add space inside the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth color change when hovering */
+    align-self: flex-start; /* Align button to the left */
+    margin-top: auto; /* Push button to bottom of card */
+}
+
+/* What happens when you hover over the "Read More" button */
+.read-more:hover {
+    background-color: #3730a3; /* Change to darker purple */
+}
+
+/* ===== INDIVIDUAL BLOG POST PAGE ===== */
+/* Layout for when you click on a blog post to read the full article */
+.post-layout {
+    display: grid; /* Use CSS Grid to create columns */
+    grid-template-columns: 2fr 1fr; /* Main article takes 2/3 width, sidebar takes 1/3 */
+    gap: 3rem; /* Space between main content and sidebar */
+}
+
+/* The main article content area */
+.post-main {
+    background: #fff; /* White background */
+    padding: 2rem; /* Space inside the content area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* The main title of the blog post */
+.post-main h2 {
+    font-size: 2.5rem; /* Large title text */
+    margin-bottom: 1rem; /* Space below title */
+    color: #333; /* Dark gray color */
+}
+
+/* Information about the post (date, author, etc.) */
+.post-meta {
+    display: flex; /* Put meta info in a row */
+    gap: 1rem; /* Space between meta items */
+    margin-bottom: 1.5rem; /* Space below meta info */
+    color: #666; /* Medium gray color */
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+/* The main image in the blog post */
+.post-image-full img {
+    width: 100%; /* Full width of content area */
+    height: 300px; /* Fixed height */
+    object-fit: cover; /* Crop image nicely to fit */
+    border-radius: 8px; /* Slightly rounded corners */
+    margin-bottom: 2rem; /* Space below image */
+}
+
+/* Paragraphs in the blog post content */
+.post-text p {
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+    line-height: 1.8; /* Good spacing between lines for easy reading */
+    color: #444; /* Dark gray text */
+}
+
+/* ===== SIDEBAR (RIGHT COLUMN) ===== */
+/* The sidebar that appears next to blog posts */
+.sidebar {
+    display: flex; /* Stack sidebar widgets vertically */
+    flex-direction: column; /* Put widgets in a column */
+    gap: 2rem; /* Space between each widget */
+}
+
+/* Individual sidebar widgets (boxes) */
+.widget {
+    background: #fff; /* White background */
+    padding: 1.5rem; /* Space inside each widget */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Widget headings (like "Categories", "Recent Posts") */
+.widget h4 {
+    margin-bottom: 1rem; /* Space below heading */
+    color: #333; /* Dark gray color */
+    font-size: 1.2rem; /* Medium size heading */
+}
+
+/* Lists in sidebar widgets */
+.category-list,
+.recent-posts {
+    list-style: none; /* Remove bullet points */
+}
+
+/* Individual items in sidebar lists */
+.category-list li,
+.recent-posts li {
+    margin-bottom: 0.5rem; /* Small space between list items */
+}
+
+/* Links in sidebar lists */
+.category-list a,
+.recent-posts a {
+    color: #666; /* Medium gray color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* What happens when you hover over sidebar links */
+.category-list a:hover,
+.recent-posts a:hover {
+    color: #4f46e5; /* Change to purple */
+}
+
+/* Container for tag buttons */
+.tag-list {
+    display: flex; /* Put tags in rows */
+    flex-wrap: wrap; /* Allow tags to wrap to new lines */
+    gap: 0.5rem; /* Small space between tags */
+}
+
+/* Individual tag buttons */
+.tag {
+    background-color: #e5e7eb; /* Light gray background */
+    color: #374151; /* Dark gray text */
+    padding: 0.3rem 0.8rem; /* Space inside tag button */
+    border-radius: 20px; /* Very rounded corners (pill shape) */
+    font-size: 0.8rem; /* Small text */
+    display: inline-block; /* Allow padding and margins */
+}
+
+/* ===== ABOUT PAGE STYLES ===== */
+/* The main heading on the About page */
+.about-content h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 2rem; /* Space below heading */
+    font-size: 2.5rem; /* Large heading text */
+    color: #333; /* Dark gray color */
+}
+
+/* Two-column layout for About page (text + image) */
+.about-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 2fr 1fr; /* Text takes 2/3 width, image takes 1/3 */
+    gap: 3rem; /* Space between columns */
+    align-items: start; /* Align content to top */
+}
+
+/* The main text content area on About page */
+.about-text {
+    background: #fff; /* White background */
+    padding: 2rem; /* Space inside the text area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Paragraphs in the About page text */
+.about-text p {
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+    line-height: 1.8; /* Good line spacing for easy reading */
+    color: #444; /* Dark gray text */
+}
+
+/* Section headings within About page text */
+.about-text h3 {
+    margin: 2rem 0 1rem 0; /* Space above and below headings */
+    color: #333; /* Dark gray color */
+}
+
+/* Lists in the About page text */
+.about-text ul {
+    margin-left: 1.5rem; /* Indent the list */
+    margin-bottom: 1.5rem; /* Space below list */
+}
+
+/* Individual list items in About page */
+.about-text li {
+    margin-bottom: 0.5rem; /* Small space between list items */
+    color: #444; /* Dark gray text */
+}
+
+/* Container for skill badges */
+.skills {
+    display: flex; /* Put skills in rows */
+    flex-wrap: wrap; /* Allow skills to wrap to new lines */
+    gap: 0.5rem; /* Small space between skill badges */
+}
+
+/* Individual skill badges (like "JavaScript", "CSS") */
+.skill {
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    padding: 0.5rem 1rem; /* Space inside badge */
+    border-radius: 25px; /* Very rounded corners (pill shape) */
+    font-size: 0.9rem; /* Slightly smaller text */
+    display: inline-block; /* Allow padding and margins */
+}
+
+/* Container for the About page image */
+.about-image {
+    background: #fff; /* White background */
+    padding: 1rem; /* Space around the image */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+    text-align: center; /* Center the image */
+}
+
+/* The actual image on About page */
+.about-image img {
+    width: 100%; /* Full width of container */
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* ===== CONTACT PAGE STYLES ===== */
+/* The main heading on the Contact page */
+.contact-content h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 1rem; /* Space below heading */
+    font-size: 2.5rem; /* Large heading text */
+    color: #333; /* Dark gray color */
+}
+
+/* Description text under the Contact heading */
+.contact-content > p {
+    text-align: center; /* Center the text */
+    margin-bottom: 2rem; /* Space below text */
+    color: #666; /* Medium gray color */
+    font-size: 1.1rem; /* Slightly larger than normal text */
+}
+
+/* Two-column layout for Contact page (form + contact info) */
+.contact-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 2fr 1fr; /* Form takes 2/3 width, info takes 1/3 */
+    gap: 3rem; /* Space between columns */
+}
+
+/* ===== CONTACT FORM ===== */
+/* Container for the contact form */
+.contact-form-container {
+    background: #fff; /* White background */
+    padding: 2rem; /* Space inside the form area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Each form field group (label + input) */
+.form-group {
+    margin-bottom: 1.5rem; /* Space between form fields */
+}
+
+/* Labels for form fields ("Name:", "Email:", etc.) */
+.form-group label {
+    display: block; /* Put label on its own line */
+    margin-bottom: 0.5rem; /* Small space below label */
+    color: #333; /* Dark gray color */
+    font-weight: 500; /* Make text a bit bolder */
+}
+
+/* Input fields and text areas in the form */
+.form-group input,
+.form-group textarea {
+    width: 100%; /* Full width of form */
+    padding: 0.8rem; /* Space inside input fields */
+    border: 2px solid #e5e7eb; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Normal text size */
+    transition: border-color 0.3s ease; /* Smooth border color change */
+}
+
+/* What happens when you click in an input field */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none; /* Remove default browser outline */
+    border-color: #4f46e5; /* Change border to purple */
+}
+
+/* Error messages that appear when form validation fails */
+.error-message {
+    color: #dc2626; /* Red color for errors */
+    font-size: 0.8rem; /* Small text */
+    margin-top: 0.25rem; /* Small space above error message */
+    display: block; /* Put error on its own line */
+}
+
+/* The "Send Message" button */
+.submit-btn {
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    padding: 0.8rem 2rem; /* Space inside button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Normal text size */
+    cursor: pointer; /* Show hand cursor when hovering */
+    transition: background-color 0.3s ease; /* Smooth color change */
+}
+
+/* What happens when you hover over the submit button */
+.submit-btn:hover {
+    background-color: #3730a3; /* Change to darker purple */
+}
+
+/* Success message that appears after form is submitted */
+.success-message {
+    display: none; /* Hidden by default */
+    background-color: #10b981; /* Green background */
+    color: #fff; /* White text */
+    padding: 1rem; /* Space inside message */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    margin-top: 1rem; /* Space above message */
+}
+
+/* ===== CONTACT INFORMATION SIDEBAR ===== */
+/* Container for contact information */
+.contact-info {
+    background: #fff; /* White background */
+    padding: 2rem; /* Space inside the info area */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Heading in the contact info sidebar */
+.contact-info h3 {
+    margin-bottom: 1.5rem; /* Space below heading */
+    color: #333; /* Dark gray color */
+}
+
+/* Each contact information item */
+.contact-item {
+    margin-bottom: 1.5rem; /* Space between contact items */
+}
+
+/* Labels in contact info (like "Email:", "Phone:") */
+.contact-item strong {
+    color: #4f46e5; /* Purple color */
+    display: block; /* Put label on its own line */
+    margin-bottom: 0.5rem; /* Small space below label */
+}
+
+/* Contact information text */
+.contact-item p {
+    color: #666; /* Medium gray color */
+    margin: 0; /* No extra margins */
+}
+
+/* ===== FOOTER ===== */
+/* The footer at the bottom of every page */
+.footer {
+    background-color: #333; /* Dark gray background */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 1.5rem 0; /* Space above and below text */
+    margin-top: 3rem; /* Space above footer */
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+/* The button that appears when you scroll down to help you get back to the top */
+.scroll-to-top {
+    position: fixed; /* Stay in same position even when scrolling */
+    bottom: 20px; /* 20px from bottom of screen */
+    right: 20px; /* 20px from right side of screen */
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text/icon */
+    border: none; /* No border */
+    border-radius: 50%; /* Make it perfectly round */
+    width: 50px; /* Width of button */
+    height: 50px; /* Height of button */
+    font-size: 1.2rem; /* Size of arrow icon */
+    cursor: pointer; /* Show hand cursor when hovering */
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease; /* Smooth animations */
+    z-index: 1000; /* Make sure it appears above other content */
+}
+
+/* What happens when you hover over the scroll to top button */
+.scroll-to-top:hover {
+    background-color: #3730a3; /* Change to darker purple */
+    transform: translateY(-2px); /* Lift button up slightly */
+}
+
+/* When the button should be visible (added by JavaScript) */
+.scroll-to-top.show {
+    display: block; /* Make button visible */
+}
+
+/* ===== RESPONSIVE DESIGN (MOBILE PHONES AND TABLETS) ===== */
+/* These styles make the website work well on smaller screens */
+@media (max-width: 768px) {
+    /* ===== MOBILE NAVIGATION ===== */
+    /* Make the navigation menu work on mobile phones */
+    .nav-list {
+        position: fixed; /* Stay in place when scrolling */
+        top: 70px; /* Start below the header */
+        left: -100%; /* Hide menu off-screen by default */
+        width: 100%; /* Full width of screen */
+        height: calc(100vh - 70px); /* Fill remaining screen height */
+        background-color: #fff; /* White background */
+        flex-direction: column; /* Stack menu items vertically */
+        justify-content: start; /* Align items to top */
+        align-items: center; /* Center items horizontally */
+        padding-top: 2rem; /* Space at top of menu */
+        transition: left 0.3s ease; /* Smooth slide animation */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+
+    /* When mobile menu is open (JavaScript adds this class) */
+    .nav-list.active {
+        left: 0; /* Slide menu into view */
+    }
+
+    /* Show the hamburger button on mobile */
+    .nav-toggle {
+        display: flex; /* Make hamburger button visible */
+    }
+
+    /* Animate hamburger lines when menu is open */
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px); /* First line becomes part of X */
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0; /* Middle line disappears */
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px); /* Third line becomes part of X */
+    }
+
+    /* ===== MOBILE LAYOUT ADJUSTMENTS ===== */
+    /* Make text smaller on mobile screens */
+    .hero h2 {
+        font-size: 2rem; /* Smaller hero heading */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller hero text */
+    }
+
+    /* Make layouts single-column on mobile */
+    .posts-container {
+        grid-template-columns: 1fr; /* One column for blog posts */
+    }
+
+    .post-layout {
+        grid-template-columns: 1fr; /* Single column for blog post page */
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr; /* Single column for About page */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr; /* Single column for Contact page */
+    }
+
+    /* Adjust spacing for mobile */
+    .container {
+        padding: 0 15px; /* Less padding on sides */
+    }
+
+    .main {
+        padding: 1rem 0; /* Less padding top and bottom */
+    }
+}
+
+/* ===== EXTRA SMALL SCREENS (VERY SMALL PHONES) ===== */
+/* Additional adjustments for very small mobile screens */
+@media (max-width: 480px) {
+    /* Make headings even smaller on tiny screens */
+    .hero h2 {
+        font-size: 1.8rem; /* Even smaller hero heading */
+    }
+
+    .post-main h2 {
+        font-size: 2rem; /* Smaller blog post titles */
+    }
+
+    /* Reduce padding inside content boxes on small screens */
+    .post-main,
+    .about-text,
+    .contact-form-container,
+    .contact-info {
+        padding: 1.5rem; /* Less padding to save space */
+    }
+}

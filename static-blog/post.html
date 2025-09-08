@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- This tells the browser we're using HTML5 (the latest version of HTML) -->
+<html lang="en">
+<!-- The main container for our webpage. "lang='en'" tells browsers this page is in English -->
+
+<head>
+    <!-- The head section contains information ABOUT the page that visitors don't see directly -->
+    
+    <!-- This tells the browser how to read the text on our page (UTF-8 handles all languages and symbols) -->
+    <meta charset="UTF-8">
+    
+    <!-- This makes our website work well on mobile phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title that appears in the browser tab (JavaScript will change this to the actual post title) -->
+    <title>Blog Post - My Static Blog</title>
+    
+    <!-- Description that search engines like Google use to understand what this page is about -->
+    <meta name="description" content="Read the latest blog post from My Static Blog">
+    
+    <!-- These tags help when people share our page on social media like Facebook -->
+    <meta property="og:title" content="Blog Post - My Static Blog">
+    <meta property="og:description" content="Read the latest blog post from My Static Blog">
+    <meta property="og:image:alt" content="Blog post preview image">
+    
+    <!-- These tags help when people share our page on Twitter -->
+    <meta name="twitter:title" content="Blog Post - My Static Blog">
+    <meta name="twitter:description" content="Read the latest blog post from My Static Blog">
+    
+    <!-- This connects our HTML to our CSS file (which makes everything look nice) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- The body contains everything that visitors can see and interact with -->
+    
+    <!-- ===== HEADER SECTION ===== -->
+    <!-- This is the top part of our website with the logo and navigation menu -->
+    <header class="header">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            <!-- Our website logo/title -->
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            
+            <!-- Navigation menu for moving between pages -->
+            <nav class="nav">
+                <!-- List of navigation links -->
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <!-- Hamburger menu button (only visible on mobile phones) -->
+                <button class="nav-toggle" id="navToggle">
+                    <!-- These three spans create the three lines of the hamburger icon -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== MAIN CONTENT SECTION ===== -->
+    <!-- This is where the main content of our blog post page goes -->
+    <main class="main">
+        <!-- Container keeps our content centered and organized -->
+        <div class="container">
+            
+            <!-- Two-column layout: main blog post on left, sidebar on right -->
+            <div class="post-layout">
+                
+                <!-- ===== MAIN BLOG POST CONTENT ===== -->
+                <!-- The main article content (JavaScript will fill this with actual post data) -->
+                <article class="post-main" id="postContent">
+                    
+                    <!-- Blog post title (JavaScript loads the actual title) -->
+                    <h2 id="postTitle">Loading...</h2>
+                    
+                    <!-- Post information: when it was published and who wrote it -->
+                    <div class="post-meta">
+                        <span class="post-date" id="postDate">Loading...</span>
+                        <span class="post-author" id="postAuthor">Loading...</span>
+                    </div>
+                    
+                    <!-- Featured image for the blog post -->
+                    <div class="post-image-full">
+                        <!-- JavaScript will set the src and alt attributes -->
+                        <img id="postImage" src="" alt="" />
+                    </div>
+                    
+                    <!-- The main text content of the blog post -->
+                    <div class="post-text" id="postText">
+                        <!-- JavaScript will replace this with the actual post content -->
+                        <p>Loading post content...</p>
+                    </div>
+                </article>
+
+                <!-- ===== SIDEBAR SECTION ===== -->
+                <!-- Right sidebar with additional navigation and information -->
+                <aside class="sidebar">
+                    
+                    <!-- ===== CATEGORIES WIDGET ===== -->
+                    <!-- Shows different categories of blog posts -->
+                    <div class="widget">
+                        <h4>Categories</h4>
+                        <!-- List of post categories -->
+                        <ul class="category-list">
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- ===== TAGS WIDGET ===== -->
+                    <!-- Shows popular tags as clickable buttons -->
+                    <div class="widget">
+                        <h4>Tags</h4>
+                        <!-- Container for tag buttons -->
+                        <div class="tag-list">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Responsive</span>
+                            <span class="tag">Grid</span>
+                            <span class="tag">Flexbox</span>
+                        </div>
+                    </div>
+                    
+                    <!-- ===== RECENT POSTS WIDGET ===== -->
+                    <!-- Shows links to other recent blog posts -->
+                    <div class="widget">
+                        <h4>Recent Posts</h4>
+                        <!-- List of recent posts with links -->
+                        <ul class="recent-posts">
+                            <!-- Each link loads a different blog post using URL parameters -->
+                            <li><a href="post.html?id=1">10 Essential JavaScript Tips for Beginners</a></li>
+                            <li><a href="post.html?id=2">CSS Grid Layout: A Complete Guide</a></li>
+                            <li><a href="post.html?id=3">Building Responsive Websites in 2025</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER SECTION ===== -->
+    <!-- This appears at the bottom of every page -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Copyright notice -->
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <!-- Button that appears when you scroll down, helps you get back to the top quickly -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- ===== JAVASCRIPT FILE ===== -->
+    <!-- This connects our HTML to our JavaScript file (which loads the blog post content dynamically) -->
+    <script src="js/main.js"></script>
+</body>
+</html>

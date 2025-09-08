@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This tells the browser what type of document this is -->
+    <meta charset="UTF-8">
+    <!-- This makes the website work well on mobile phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title that appears in the browser tab -->
+    <title>My Static Blog - Home</title>
+    
+    <!-- This helps search engines understand what the page is about -->
+    <meta name="description" content="A responsive static blog showcasing web development articles and tutorials">
+    
+    <!-- These help when people share your website on social media -->
+    <meta property="og:title" content="My Static Blog - Home">
+    <meta property="og:description" content="A responsive static blog showcasing web development articles and tutorials">
+    <meta property="og:image:alt" content="Static blog homepage preview">
+    <meta name="twitter:title" content="My Static Blog - Home">
+    <meta name="twitter:description" content="A responsive static blog showcasing web development articles and tutorials">
+    
+    <!-- This connects our HTML to our CSS file for styling -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- This is the top part of our website with the logo and menu -->
+    <header class="header">
+        <!-- Container keeps everything centered and organized -->
+        <div class="container">
+            <!-- Our website logo/title -->
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            <!-- Navigation menu for moving between pages -->
+            <nav class="nav">
+                <!-- List of menu items -->
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+                <!-- Hamburger menu button for mobile phones (3 lines) -->
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- This is where all the main content goes -->
+    <main class="main">
+        <!-- Container keeps everything centered -->
+        <div class="container">
+            <!-- Welcome section at the top of the page -->
+            <section class="hero">
+                <h2>Welcome to My Blog</h2>
+                <p>Discover amazing articles about web development, design, and technology</p>
+            </section>
+
+            <!-- Section that shows all our blog posts -->
+            <section class="blog-grid">
+                <h3>Latest Posts</h3>
+                <!-- This div holds all our blog post cards in a grid -->
+                <div class="posts-container">
+                    <!-- BLOG POST 1 - This is our first blog post card -->
+                    <article class="post-card">
+                        <!-- The image part of the blog post -->
+                        <div class="post-image">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/4f46e5/ffffff?text=JavaScript+Tips" alt="JavaScript Tips">
+                        </div>
+                        <!-- The text part of the blog post -->
+                        <div class="post-content">
+                            <h4 class="post-title">10 Essential JavaScript Tips for Beginners</h4>
+                            <p class="post-excerpt">Learn the most important JavaScript concepts that every beginner should know to write better code and avoid common mistakes.</p>
+                            <!-- Button that takes you to the full blog post -->
+                            <a href="post.html?id=1" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- BLOG POST 2 - This is our second blog post card -->
+                    <article class="post-card">
+                        <!-- The image part of the blog post -->
+                        <div class="post-image">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/059669/ffffff?text=CSS+Grid" alt="CSS Grid Guide">
+                        </div>
+                        <!-- The text part of the blog post -->
+                        <div class="post-content">
+                            <h4 class="post-title">CSS Grid Layout: A Complete Guide</h4>
+                            <p class="post-excerpt">Master CSS Grid with this comprehensive guide covering everything from basic concepts to advanced techniques for modern web layouts.</p>
+                            <!-- Button that takes you to the full blog post -->
+                            <a href="post.html?id=2" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- BLOG POST 3 - This is our third blog post card -->
+                    <article class="post-card">
+                        <!-- The image part of the blog post -->
+                        <div class="post-image">
+                            <img src="https://img-wrapper.vercel.app/image?url=https://placehold.co/400x250/dc2626/ffffff?text=Responsive+Design" alt="Responsive Design">
+                        </div>
+                        <!-- The text part of the blog post -->
+                        <div class="post-content">
+                            <h4 class="post-title">Building Responsive Websites in 2025</h4>
+                            <p class="post-excerpt">Explore the latest techniques and best practices for creating websites that look great on all devices and screen sizes.</p>
+                            <!-- Button that takes you to the full blog post -->
+                            <a href="post.html?id=3" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- This is the bottom part of our website -->
+    <footer class="footer">
+        <!-- Container keeps the footer content centered -->
+        <div class="container">
+            <p>&copy; 2025 My Blog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Button that appears when you scroll down - click to go back to top -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
+
+    <!-- This connects our HTML to our JavaScript file for interactive features -->
+    <script src="js/main.js"></script>
+</body>
+</html>

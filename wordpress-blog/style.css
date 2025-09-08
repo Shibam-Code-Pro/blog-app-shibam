@@ -1,0 +1,821 @@
+/*
+Theme Name: My Static Blog WordPress Theme
+Description: A responsive WordPress theme converted from a static blog, featuring Bootstrap 5, mobile navigation, and clean design.
+Author: Blog Author
+Version: 1.0
+Text Domain: my-static-blog
+*/
+
+/* ===== WORDPRESS THEME STYLES ===== */
+/* This file contains the main styles for the WordPress theme */
+/* Bootstrap 5 is loaded via functions.php for responsive layout */
+
+/* ===== RESET AND BASE STYLES ===== */
+/* Remove default margins and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes padding and border included in element's total width/height */
+}
+
+/* Basic body styling */
+body {
+    font-family: 'Arial', sans-serif; /* Easy-to-read font */
+    line-height: 1.6; /* Good spacing between lines for readability */
+    color: #333; /* Dark gray text color */
+    background-color: #f8f9fa; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== HEADER STYLES ===== */
+/* Main header styling */
+.header {
+    background-color: #fff; /* White background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow below header */
+    position: sticky; /* Header stays at top when scrolling */
+    top: 0; /* Stick to the very top */
+    z-index: 100; /* Make sure header appears above other content */
+}
+
+/* Header container layout */
+.header .container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Logo on left, nav on right */
+    align-items: center; /* Center items vertically */
+    padding: 1rem 20px; /* Add padding inside header */
+}
+
+/* Logo styling */
+.logo h1 {
+    color: #4f46e5; /* Purple color for the logo */
+    font-size: 1.8rem; /* Make logo text larger */
+    margin: 0; /* Remove default margin */
+    font-weight: bold; /* Bold font weight */
+}
+
+/* ===== NAVIGATION STYLES ===== */
+/* Navigation container */
+.nav {
+    display: flex; /* Use flexbox for navigation layout */
+    align-items: center; /* Center navigation items vertically */
+}
+
+/* Navigation menu list */
+.nav-list {
+    display: flex; /* Display menu items in a row */
+    list-style: none; /* Remove bullet points */
+    gap: 2rem; /* Space between menu items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Navigation link styling */
+.nav-list a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Dark gray text color */
+    font-weight: 500; /* Medium font weight */
+    font-size: 1rem;
+    line-height: 1.5;
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+/* Navigation link hover and active states */
+.nav-list a:hover,
+.nav-list a.active,
+.nav-list .current-menu-item a {
+    color: #4f46e5; /* Change to purple when hovered or active */
+}
+
+/* ===== MOBILE NAVIGATION TOGGLE ===== */
+/* Hamburger menu button (hidden on desktop) */
+.nav-toggle {
+    display: none; /* Hidden by default (shown on mobile) */
+    flex-direction: column; /* Stack hamburger lines vertically */
+    background: none; /* No background */
+    border: none; /* No border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    padding: 0.5rem; /* Add some padding for easier clicking */
+}
+
+/* Hamburger menu lines */
+.nav-toggle span {
+    width: 25px; /* Width of each line */
+    height: 3px; /* Height of each line */
+    background-color: #333; /* Dark gray color */
+    margin: 3px 0; /* Space between lines */
+    transition: 0.3s; /* Smooth animation when transforming */
+}
+
+/* ===== LAYOUT CONTAINER ===== */
+/* Container to center content and set maximum width */
+.container {
+    max-width: 1200px; /* Maximum width for large screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add padding on left and right sides */
+}
+
+/* ===== HERO SECTION ===== */
+/* Hero section (welcome area on homepage) */
+.hero {
+    text-align: center; /* Center all text */
+    margin-bottom: 3rem; /* Space below hero section */
+}
+
+/* Hero main heading */
+.hero h2 {
+    font-size: 2.5rem; /* Large heading size */
+    color: #333; /* Dark gray color */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+/* Hero description text */
+.hero p {
+    font-size: 1.2rem; /* Slightly larger than normal text */
+    color: #666; /* Medium gray color */
+    max-width: 600px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the text */
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* Hero main heading */
+.hero h1 {
+    font-size: 2.5rem; /* Large heading size to match static blog */
+    margin-bottom: 1rem; /* Space below heading */
+    color: #333; /* Dark gray color */
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* ===== BLOG GRID SECTION ===== */
+/* Blog grid section heading */
+.blog-grid h3 {
+    text-align: center; /* Center the heading */
+    font-size: 2rem; /* Large heading size */
+    margin-bottom: 2rem; /* Space below heading */
+    color: #333; /* Dark gray color */
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* ===== BLOG POST CARDS ===== */
+/* Individual blog post card styling */
+.post-card {
+    background: #fff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide content that goes outside rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover animation */
+    display: flex; /* Use flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
+    height: 100%; /* Make all cards same height */
+}
+
+/* Post card hover effect */
+.post-card:hover {
+    transform: translateY(-5px); /* Move card up slightly */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+/* Post image styling */
+.post-image img {
+    width: 100%; /* Full width of card */
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit without distortion */
+}
+
+/* Post content area */
+.post-content {
+    padding: 1.5rem; /* Add padding inside content area */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    flex-grow: 1; /* Take up remaining space in card */
+}
+
+/* Post card heading */
+.post-card h3 {
+    font-size: 1.3rem; /* Medium heading size to match static blog */
+    margin-bottom: 0.5rem; /* Small space below heading */
+    color: #333; /* Dark gray color */
+    font-weight: bold;
+    line-height: 1.3;
+    text-align: left; /* Left align post titles */
+}
+
+/* Post excerpt (preview text) */
+.post-excerpt {
+    color: #666; /* Medium gray color */
+    margin-bottom: 1rem; /* Space below excerpt */
+    line-height: 1.5; /* Good line spacing for readability */
+    flex-grow: 1; /* Take up available space, pushing button to bottom */
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+/* Read more button */
+.read-more {
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    padding: 0.5rem 1rem; /* Add padding inside button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 0.9rem; /* Slightly smaller text */
+    font-weight: normal;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer; /* Show pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color change on hover */
+    align-self: flex-start; /* Align to left side */
+    margin-top: auto; /* Push button to bottom of card */
+}
+
+/* Read more button hover effect */
+.read-more:hover {
+    background-color: #3730a3; /* Darker purple on hover */
+    color: #fff; /* Keep text white */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Container for all blog post cards */
+.posts-container {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 2rem; /* Space between cards */
+}
+
+/* ===== SINGLE POST PAGE LAYOUT ===== */
+/* Two-column layout for single post page (main content + sidebar) */
+.post-layout {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 2fr 1fr; /* Main content takes 2/3, sidebar takes 1/3 */
+    gap: 3rem; /* Space between main content and sidebar */
+}
+
+.post-main {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.post-main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.post-image-full img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.post-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    color: #444;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.post-text h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem 0;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+/* ===== ABOUT PAGE STYLES ===== */
+/* About page content */
+.about-content h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 2rem; /* Space below heading */
+    font-size: 2.5rem; /* Large heading size */
+    color: #333; /* Dark gray color */
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+/* Two-column layout for about page */
+.about-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: 2fr 1fr; /* Text content takes 2/3, image takes 1/3 */
+    gap: 3rem; /* Space between columns */
+    align-items: start; /* Align items to top */
+}
+
+/* About text content styling */
+.about-text {
+    background: #fff; /* White background */
+    padding: 2rem; /* Add padding inside */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+.about-text p {
+    margin-bottom: 1.5rem; /* Space below paragraphs */
+    line-height: 1.8; /* Good line spacing for readability */
+    color: #444; /* Dark gray text */
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.about-text h3 {
+    margin: 2rem 0 1rem 0; /* Space above and below headings */
+    color: #333; /* Dark gray color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.about-text ul {
+    margin-left: 1.5rem; /* Indent list */
+    margin-bottom: 1.5rem; /* Space below list */
+}
+
+.about-text li {
+    margin-bottom: 0.5rem; /* Space between list items */
+    color: #444; /* Dark gray text */
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* Skills displayed as styled badges */
+.skills {
+    display: flex; /* Display skills in a row */
+    flex-wrap: wrap; /* Allow wrapping to next line */
+    gap: 0.5rem; /* Space between skill badges */
+}
+
+.skill {
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    padding: 0.5rem 1rem; /* Padding inside badge */
+    border-radius: 25px; /* Rounded pill shape */
+    font-size: 0.9rem; /* Slightly smaller text */
+    display: inline-block; /* Allow padding and margins */
+}
+
+/* About image styling */
+.about-image {
+    background: #fff; /* White background */
+    padding: 1rem; /* Add padding inside */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+    text-align: center; /* Center the image */
+}
+
+.about-image img {
+    width: 100%; /* Full width of container */
+    border-radius: 8px; /* Slightly rounded image corners */
+}
+
+/* ===== CONTACT PAGE STYLES ===== */
+/* Contact page content */
+.contact-content h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.contact-content > p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.contact-form-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    line-height: 1.5;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.submit-btn {
+    background-color: #4f46e5;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    display: inline-block;
+}
+
+.submit-btn:hover {
+    background-color: #3730a3;
+}
+
+.success-message {
+    background-color: #10b981;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    display: none;
+}
+
+/* Contact info */
+.contact-info {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.contact-item {
+    margin-bottom: 1.5rem;
+}
+
+.contact-item strong {
+    color: #4f46e5;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-item p {
+    color: #666;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.post-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-section {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sidebar-section h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-list li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-list li a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.sidebar-list a:hover {
+    color: #4f46e5;
+}
+
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* ===== SIDEBAR STYLES ===== */
+/* Sidebar container */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Individual sidebar widgets */
+.widget {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.widget h4 {
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.category-list,
+.recent-posts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li,
+.recent-posts li {
+    margin-bottom: 0.5rem;
+}
+
+.category-list a,
+.recent-posts a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.category-list a:hover,
+.recent-posts a:hover {
+    color: #4f46e5;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    background-color: #e5e7eb;
+    color: #374151;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    line-height: 1.4;
+    display: inline-block;
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+/* Main content container */
+.main {
+    min-height: calc(100vh - 140px); /* Ensure main content takes up most of screen height */
+    padding: 2rem 0; /* Add padding top and bottom */
+}
+
+/* ===== FOOTER STYLES ===== */
+/* Footer styling */
+.site-footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center all text */
+    padding: 2rem 0; /* Add padding top and bottom */
+    margin-top: 3rem; /* Space above footer */
+}
+
+.site-footer p {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9rem; /* Slightly smaller text */
+}
+
+.site-description {
+    color: #ccc; /* Light gray for description */
+    font-size: 0.8rem; /* Even smaller text */
+    margin-top: 0.5rem !important; /* Small space above description */
+}
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+    /* Mobile navigation */
+    .nav-list {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-list.active {
+        left: 0;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Layout adjustments */
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .posts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .post-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .main {
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .post-main h2 {
+        font-size: 2rem;
+    }
+
+    .post-main,
+    .about-text,
+    .contact-form-container,
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
+
+/* ===== SCROLL TO TOP BUTTON ===== */
+/* Scroll to top button styling */
+.scroll-to-top {
+    position: fixed; /* Fixed position on screen */
+    bottom: 20px; /* Distance from bottom */
+    right: 20px; /* Distance from right */
+    background-color: #4f46e5; /* Purple background */
+    color: #fff; /* White text */
+    border: none; /* No border */
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
+    font-size: 1.2rem; /* Font size for arrow */
+    cursor: pointer; /* Show pointer cursor */
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease; /* Smooth animation */
+    z-index: 1000; /* Appear above other content */
+}
+
+/* Scroll to top button hover effect */
+.scroll-to-top:hover {
+    background-color: #3730a3; /* Darker purple on hover */
+    transform: translateY(-2px); /* Move up slightly */
+}
+
+/* Show scroll to top button when needed */
+.scroll-to-top.show {
+    display: block; /* Show the button */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* Mobile devices (768px and below) */
+@media (max-width: 768px) {
+    /* Adjust hero section for mobile */
+    .hero-section h2 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    
+    .hero-section p {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+    
+    /* Adjust single post title for mobile */
+    .single-post h1 {
+        font-size: 2rem; /* Smaller heading on mobile */
+    }
+    
+    /* Adjust padding for mobile */
+    .single-post,
+    .sidebar-widget {
+        padding: 1.5rem; /* Less padding on mobile */
+    }
+}
+
+/* Small mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .hero-section h2 {
+        font-size: 1.8rem; /* Even smaller heading */
+    }
+    
+    .single-post h1 {
+        font-size: 1.8rem; /* Even smaller heading */
+    }
+}
