@@ -4,7 +4,7 @@ A responsive WordPress theme converted from a static blog, featuring pixel-perfe
 
 ## 🚀 Live Demo for wordpress-blog
 
-[View Live Wordpress Blog](https://Shibam-Code-Pro.github.io/blog-app-shibam)
+[View Live Wordpress Blog](https://wordpress-shibam.lovestoblog.com)
 
 > **Part of the Blog App Project**: This WordPress theme is part of a larger project that demonstrates the conversion from static HTML/CSS/JS to WordPress. See the [main project README](../README.md) for the complete overview including the original static blog design.
 
