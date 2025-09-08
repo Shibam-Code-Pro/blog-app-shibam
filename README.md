@@ -4,7 +4,7 @@ A comprehensive blog application project demonstrating the conversion from a sta
 
 ## 🚀 Live Demo for static-blog
 
-[View Live Static Blog](https://Shibam-Code-Pro.github.io/blog-app-shibam)
+[View Live Static Blog](https://static-blog-shibam.netlify.app)
 
 ## 🚀 Live Demo for wordpress-blog
 
