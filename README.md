@@ -2,6 +2,14 @@
 
 A comprehensive blog application project demonstrating the conversion from a static HTML/CSS/JavaScript blog to a fully functional WordPress theme. This project showcases both frontend development skills and WordPress theme development expertise.
 
+## 🚀 Live Demo for static-blog
+
+[View Live Static Blog](https://Shibam-Code-Pro.github.io/blog-app-shibam)
+
+## 🚀 Live Demo for wordpress-blog
+
+[View Live Wordpress Blog](https://Shibam-Code-Pro.github.io/blog-app-shibam)
+
 ## 📋 Project Overview
 
 This repository contains two complete blog implementations:
@@ -131,5 +139,15 @@ Feel free to fork this project and make improvements! This is a learning project
 4. **Customize**: Use this as a foundation for your own blog projects
 
 ---
+
+## 📞 Contact
+
+- **Email**: Connect-With-Shibam@outlook.com
+- **LinkedIn**: [linkedin.com/in/shibam-webdev](https://linkedin.com/in/shibam-webdev)
+- **GitHub**: [github.com/Shibam-Code-Pro](https://github.com/Shibam-Code-Pro)
+
+---
+
+⭐ If you found this project helpful, please give it a star on GitHub!
 
 *This project serves as a comprehensive example of modern web development practices, from static site creation to dynamic CMS integration.*
