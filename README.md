@@ -8,7 +8,7 @@ A comprehensive blog application project demonstrating the conversion from a sta
 
 ## 🚀 Live Demo for wordpress-blog
 
-[View Live Wordpress Blog](https://Shibam-Code-Pro.github.io/blog-app-shibam)
+[View Live Wordpress Blog](https://wordpress-shibam.lovestoblog.com)
 
 ## 📋 Project Overview
 
