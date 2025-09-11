@@ -15,6 +15,11 @@ A comprehensive blog application project demonstrating the conversion from a sta
   <p><em>Modern blog interface with responsive design and clean typography - available in both static and WordPress versions</em></p>
 </div>
 
+## 🚀 Live Demo
+
+- **Static Blog**: [View Live Static Blog](https://static-blog-shibam.netlify.app)
+- **WordPress Blog**: [View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
+
 ## 📋 Project Overview
 
 This repository contains two complete blog implementations:
