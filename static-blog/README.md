@@ -7,6 +7,10 @@
 
 A responsive static blog website built with HTML, CSS, and JavaScript. This project demonstrates fundamental web development skills including responsive design, form validation, and interactive features. Features pixel-perfect typography, modern UI design, and serves as the foundation for the WordPress theme conversion.
 
+## 🚀 Live Demo
+
+[View Live Static Blog](https://static-blog-shibam.netlify.app)
+
 ## 📸 Screenshots
 
 <div align="center">
@@ -141,3 +145,15 @@ This project was developed through 5 key commits:
 ## 🤝 Contributing
 
 Feel free to fork this project and make improvements! This is a learning project, so suggestions and enhancements are welcome.
+
+---
+
+## 📞 Contact
+
+- **Email**: Connect-With-Shibam@outlook.com
+- **LinkedIn**: [linkedin.com/in/shibam-webdev](https://linkedin.com/in/shibam-webdev)
+- **GitHub**: [github.com/Shibam-Code-Pro](https://github.com/Shibam-Code-Pro)
+
+---
+
+⭐ If you found this project helpful, please give it a star on GitHub!

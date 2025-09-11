@@ -8,6 +8,10 @@
 
 A responsive WordPress theme converted from a static blog, featuring pixel-perfect typography, mobile navigation, and clean design. This theme demonstrates fundamental WordPress development skills including PHP templating, WordPress Loop integration, and theme customization with exact visual parity to the original static design.
 
+## 🚀 Live Demo
+
+[View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
+
 ## 📸 Screenshots
 
 <div align="center">
@@ -186,3 +190,15 @@ Feel free to fork this project and make improvements! This is a learning project
 ### Sidebar Empty
 - Go to **Appearance > Widgets** to add content to the "Blog Sidebar"
 - Add widgets like "Recent Posts", "Categories", or "Text" widgets
+
+---
+
+## 📞 Contact
+
+- **Email**: Connect-With-Shibam@outlook.com
+- **LinkedIn**: [linkedin.com/in/shibam-webdev](https://linkedin.com/in/shibam-webdev)
+- **GitHub**: [github.com/Shibam-Code-Pro](https://github.com/Shibam-Code-Pro)
+
+---
+
+⭐ If you found this project helpful, please give it a star on GitHub!
