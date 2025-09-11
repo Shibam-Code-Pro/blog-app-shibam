@@ -1,6 +1,18 @@
-# Static Blog Project
+# 🌐 Static Blog Project
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Responsive](https://img.shields.io/badge/Responsive-4CAF50?style=for-the-badge&logo=responsive&logoColor=white)
 
 A responsive static blog website built with HTML, CSS, and JavaScript. This project demonstrates fundamental web development skills including responsive design, form validation, and interactive features. Features pixel-perfect typography, modern UI design, and serves as the foundation for the WordPress theme conversion.
+
+## 📸 Screenshots
+
+<div align="center">
+  <img src="screenshot/static-blog.png" alt="Static Blog Screenshot" width="800">
+  <p><em>Clean and modern static blog with responsive design and interactive features</em></p>
+</div>
 
 > **Part of the Blog App Project**: This static blog is part of a larger project that demonstrates the conversion from static HTML/CSS/JS to WordPress. See the [main project README](../README.md) for the complete overview including the WordPress theme conversion.
 
@@ -39,18 +51,30 @@ No build process or server required - it's a static website that runs directly i
 
 ```
 static-blog/
-├── index.html          # Homepage with blog post grid
-├── post.html           # Single post page template
-├── about.html          # About page
-├── contact.html        # Contact page with form
-├── css/
+├── 📄 index.html          # Homepage with blog post grid
+├── 📄 post.html           # Single post page template
+├── 📄 about.html          # About page
+├── 📄 contact.html        # Contact page with form
+├── 🎨 css/
 │   └── style.css       # All styling and responsive design
-├── js/
+├── ⚡ js/
 │   └── main.js         # JavaScript for interactivity
-├── README.md           # Project documentation
-├── LICENSE             # MIT License
-└── .gitignore          # Git ignore file
+├── 📸 screenshot/         # Project screenshots
+│   └── static-blog.png
+├── 📖 README.md           # Project documentation
+├── 📜 LICENSE             # MIT License
+└── 🚫 .gitignore          # Git ignore file
 ```
+
+## 🛠️ Technologies Used
+
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="40" height="40"/><br><b>HTML5</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40"/><br><b>CSS3</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"/><br><b>JavaScript</b></td>
+</tr>
+</table>
 
 ### Parent Project Structure
 This static blog is part of the larger `blog-app-shibam` project:

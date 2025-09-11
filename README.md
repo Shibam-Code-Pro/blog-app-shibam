@@ -1,6 +1,19 @@
-# Blog App - Static to WordPress Conversion
+# 📝 Blog App - Static to WordPress Conversion
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
 A comprehensive blog application project demonstrating the conversion from a static HTML/CSS/JavaScript blog to a fully functional WordPress theme. This project showcases both frontend development skills and WordPress theme development expertise.
+
+## 📸 Screenshots
+
+<div align="center">
+  <img src="screenshot/blog-app-shibam.png" alt="Blog App Screenshot" width="800">
+  <p><em>Modern blog interface with responsive design and clean typography - available in both static and WordPress versions</em></p>
+</div>
 
 ## 📋 Project Overview
 
@@ -30,35 +43,49 @@ Both implementations maintain pixel-perfect visual parity while demonstrating di
 
 ```
 blog-app-shibam/
-├── README.md                    # Main project documentation
-├── static-blog/                 # Static HTML/CSS/JS blog
-│   ├── index.html              # Homepage with blog post grid
-│   ├── post.html               # Single post page template
-│   ├── about.html              # About page
-│   ├── contact.html            # Contact page with form
-│   ├── css/
+├── 📖 README.md                    # Main project documentation
+├── 📸 screenshot/                  # Project screenshots
+│   └── blog-app-shibam.png
+├── 🌐 static-blog/                 # Static HTML/CSS/JS blog
+│   ├── 📄 index.html              # Homepage with blog post grid
+│   ├── 📄 post.html               # Single post page template
+│   ├── 📄 about.html              # About page
+│   ├── 📄 contact.html            # Contact page with form
+│   ├── 🎨 css/
 │   │   └── style.css           # All styling and responsive design
-│   ├── js/
+│   ├── ⚡ js/
 │   │   └── main.js             # JavaScript for interactivity
-│   ├── README.md               # Static blog documentation
-│   ├── LICENSE                 # MIT License
-│   └── .gitignore              # Git ignore file
-└── wordpress-blog/             # WordPress theme conversion
-    ├── style.css               # Main stylesheet with WordPress theme header
-    ├── functions.php           # Theme functions and WordPress integration
-    ├── header.php              # Header template with navigation
-    ├── footer.php              # Footer template with scripts
-    ├── index.php               # Homepage template with WordPress Loop
-    ├── single.php              # Single post template
-    ├── page.php                # Static page template (About Me & Get In Touch)
-    ├── js/
+│   ├── 📖 README.md               # Static blog documentation
+│   ├── 📜 LICENSE                 # MIT License
+│   └── 🚫 .gitignore              # Git ignore file
+└── 🔧 wordpress-blog/             # WordPress theme conversion
+    ├── 🎨 style.css               # Main stylesheet with WordPress theme header
+    ├── ⚙️ functions.php           # Theme functions and WordPress integration
+    ├── 📄 header.php              # Header template with navigation
+    ├── 📄 footer.php              # Footer template with scripts
+    ├── 📄 index.php               # Homepage template with WordPress Loop
+    ├── 📄 single.php              # Single post template
+    ├── 📄 page.php                # Static page template (About Me & Get In Touch)
+    ├── ⚡ js/
     │   └── main.js             # JavaScript for mobile navigation and interactions
-    ├── sample-posts.php        # Sample content generator script
-    ├── sample-content.sql      # SQL dump of sample content for manual import
-    ├── README.md               # WordPress theme documentation
-    ├── LICENSE                 # MIT License
-    └── .gitignore              # Git ignore file
+    ├── 🗃️ sample-posts.php        # Sample content generator script
+    ├── 🗃️ sample-content.sql      # SQL dump of sample content for manual import
+    ├── 📖 README.md               # WordPress theme documentation
+    ├── 📜 LICENSE                 # MIT License
+    └── 🚫 .gitignore              # Git ignore file
 ```
+
+## 🛠️ Technologies Used
+
+<table>
+<tr>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="40" height="40"/><br><b>HTML5</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="40" height="40"/><br><b>CSS3</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="40" height="40"/><br><b>JavaScript</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/wordpress/wordpress-original.svg" width="40" height="40"/><br><b>WordPress</b></td>
+<td align="center"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" width="40" height="40"/><br><b>PHP</b></td>
+</tr>
+</table>
 
 ## 🚀 Getting Started
 
