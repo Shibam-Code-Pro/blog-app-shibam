@@ -18,7 +18,7 @@ A responsive static blog website built with HTML, CSS, and JavaScript. This proj
 
 ## 🚀 Live Demo
 
-[View Live Static Blog](https://static-blog-shibam.netlify.app)
+[View Live Static Blog](https://blog-app-shibam.vercel.app)
 
 ## 📋 Project Summary
 
