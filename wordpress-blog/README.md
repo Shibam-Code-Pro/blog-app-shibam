@@ -19,7 +19,7 @@ A responsive WordPress theme converted from a static blog, featuring pixel-perfe
 
 ## 🚀 Live Demo
 
-[View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
+[View WordPress Blog](https://wordpress-shibam.lovestoblog.com)
 
 ## 📋 Project Summary
 
