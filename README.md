@@ -17,7 +17,7 @@ A comprehensive blog application project demonstrating the conversion from a sta
 
 ## 🚀 Live Demo
 
-- **Static Blog**: [View Live Static Blog](https://static-blog-shibam.netlify.app)
+- **Static Blog**: [View Live Static Blog](https://blog-app-shibam.vercel.app)
 - **WordPress Blog**: [View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
 
 ## 📋 Project Overview
