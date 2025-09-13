@@ -8,10 +8,6 @@
 
 A responsive WordPress theme converted from a static blog, featuring pixel-perfect typography, mobile navigation, and clean design. This theme demonstrates fundamental WordPress development skills including PHP templating, WordPress Loop integration, and theme customization with exact visual parity to the original static design.
 
-## 🚀 Live Demo
-
-[View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
-
 ## 📸 Screenshots
 
 <div align="center">
@@ -20,6 +16,10 @@ A responsive WordPress theme converted from a static blog, featuring pixel-perfe
 </div>
 
 > **Part of the Blog App Project**: This WordPress theme is part of a larger project that demonstrates the conversion from static HTML/CSS/JS to WordPress. See the [main project README](../README.md) for the complete overview including the original static blog design.
+
+## 🚀 Live Demo
+
+[View Live WordPress Blog](https://wordpress-shibam.lovestoblog.com)
 
 ## 📋 Project Summary
 
